@@ -13,8 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="libs/openlayers3/ol.css">
 	<link rel="stylesheet" type="text/css" href="libs/spectrum/spectrum.css">
 	<link rel="stylesheet" type="text/css" href="libs/jstree/themes/mixed/style.css">
-	<link rel="stylesheet" type="text/css" href="libs/Cesium/Widgets/CesiumWidget/CesiumWidget.css">
-</head>
+	 <link rel="stylesheet" href="https://cesiumjs.org/releases/1.57/Build/Cesium/Widgets/widgets.css"></head>
 
 
 <body>
@@ -32,7 +31,7 @@
 	<script src="libs/jstree/jstree.js"></script>
 	<script src="build/potree/potree.js"></script>
 	<script src="libs/plasio/js/laslaz.js"></script>
-	<script src="libs/Cesium/Cesium.js"></script>
+	<script src="https://cesiumjs.org/releases/1.57/Build/Cesium/Cesium.js"></script>
 
 	<!-- INCLUDE ADDITIONAL DEPENDENCIES HERE -->
 	<!-- INCLUDE SETTINGS HERE -->
@@ -52,14 +51,15 @@
 		animation: false,
 		baseLayerPicker : false,
 		fullscreenButton: false,
+		terrainProvider : Cesium.createWorldTerrain(),
 		geocoder: false,
 		homeButton: false,
 		infoBox: false,
+		terrainExaggeration : 3.0,
 		sceneModePicker: false,
 		selectionIndicator: false,
 		timeline: false,
 		navigationHelpButton: false,
-		imageryProvider : Cesium.createOpenStreetMapImageryProvider({url : 'https://a.tile.openstreetmap.org/'}),
 		terrainShadows: Cesium.ShadowMode.DISABLED,
 	});
 
